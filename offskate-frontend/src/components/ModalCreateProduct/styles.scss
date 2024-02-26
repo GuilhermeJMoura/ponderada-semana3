@@ -1,0 +1,59 @@
+$container-struct-color: #f5f5f5;
+$color-test: #ff0000;
+$first-color: #0571d3;
+$container-color: #ffffff;
+
+.modal {
+  position: fixed; /* Position fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* High z-index to ensure it's above other content */
+}
+
+.modal-content {
+  background-color: white; /* White background for the modal content */
+  padding: 20px;
+  border-radius: 5px; /* Rounded corners */
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Max width to ensure it doesn't get too large on big screens */
+
+  .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .name-product,
+    .desc-product,
+    .price-product,
+    .color-product,
+    .size-product {
+      padding: 15px;
+      width: 40%;
+      border: 2px solid $first-color;
+      background-color: $container-color;
+      border-radius: 10px;
+    }
+  }
+
+  .btn-container {
+    margin-top: 40px;
+
+    .btn-close-modal,
+    .btn-send {
+      width: 30%;
+      background-color: $first-color;
+      border: 2px solid black;
+      border-radius: 10px;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
